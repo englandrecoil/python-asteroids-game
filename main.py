@@ -38,6 +38,11 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+            for shot in shots:
+                if shot.is_collide_with(asteroid):
+                    asteroid.kill()
+                    shot.kill()
+
 
         screen.fill(color="black")
 
